@@ -1,13 +1,15 @@
 <body>
-  <header>
-    <app-nav-menu></app-nav-menu>
-  </header>
-  <main>
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
-  </main>
-  <footer>
+  <div class="wrapper">
+    <header>
+      <app-nav-menu></app-nav-menu>
+    </header>
+    <main>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </main>
+  </div>
+  <footer class="footer">
     <div layout="row" layout-align="center center">
       <mat-toolbar color="primary">
         <mat-toolbar-row>
@@ -16,4 +18,5 @@
       </mat-toolbar>
     </div>
   </footer>
+
 </body>

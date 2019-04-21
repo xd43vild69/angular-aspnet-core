@@ -9,6 +9,7 @@ import {
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav'
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatNativeDateModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule
   ],
   exports: [
     MatDatepickerModule,
@@ -25,7 +27,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatNativeDateModule,
     MatInputModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatSidenavModule
   ],
   providers: [MatDatepickerModule],
 })
