@@ -1,7 +1,19 @@
 <body>
-  <app-nav-menu></app-nav-menu>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-  <div>Footer here!</div>
+  <header>
+    <app-nav-menu></app-nav-menu>
+  </header>
+  <main>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+  <footer>
+    <div layout="row" layout-align="center center">
+      <mat-toolbar color="primary">
+        <mat-toolbar-row>
+          <span>Custom Toolbar</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+  </footer>
 </body>

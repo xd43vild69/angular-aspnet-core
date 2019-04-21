@@ -5,9 +5,10 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   imports: [
@@ -15,14 +16,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule
   ],
   exports: [
     MatDatepickerModule,
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule
   ],
   providers: [MatDatepickerModule],
 })
