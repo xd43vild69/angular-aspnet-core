@@ -1,18 +1,25 @@
 <h1>{{modoEdicion ? 'Editar' : 'Agregar'}} Persona</h1>
 
+<button type="button" class="btn btn-elegant">Elegant</button>
 
 <form class="form-horizontal" novalidate (ngSubmit)="save()" [formGroup]="formGroup">
   <fieldset>
 
     <div class="form-group" [ngClass]="{'has-error': (formGroup.get('nombre').touched || formGroup.get('nombre').dirty) && !formGroup.get('nombre').valid }">
-      <label class="col-md-2 control-label" for="nombreId">Nombre</label>
+
+
 
       <div class="col-md-8">
-        <input class="form-control"
-               id="nombreId"
-               type="text"
-               required
-               formControlName="nombre" />
+        <mat-form-field>
+          <input matInput
+                 placeholder="Nombre"
+                 id="nombreId"
+                 type="text"
+                 required
+                 formControlName="nombre">
+        </mat-form-field>
+
+
         <span class="help-block" *ngIf="(formGroup.get('nombre').touched || formGroup.get('nombre').dirty) && formGroup.get('nombre').errors">
           <span *ngIf="formGroup.get('nombre').errors.required">
             El campo nombre es requerido
@@ -22,14 +29,22 @@
     </div>
 
     <div class="form-group" [ngClass]="{'has-error': (formGroup.get('fechaNacimiento').touched || formGroup.get('fechaNacimiento').dirty) && !formGroup.get('fechaNacimiento').valid }">
-      <label class="col-md-2 control-label" for="fechaNacimiento">Fecha Nacimiento</label>
+
 
       <div class="col-md-8">
-        <input class="form-control"
-               id="fechaNacimiento"
-               type="date"
-               required
-               formControlName="fechaNacimiento" />
+
+        <mat-form-field>
+          <input matInput
+                 [matDatepicker]="picker"
+                 placeholder="Seleccionar fecha"
+                 id="fechaNacimiento"
+                 
+                 required
+                 formControlName="fechaNacimiento">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
         <span class="help-block" *ngIf="(formGroup.get('fechaNacimiento').touched || formGroup.get('fechaNacimiento').dirty) && formGroup.get('fechaNacimiento').errors">
           <span *ngIf="formGroup.get('fechaNacimiento').errors.required">
             El campo Fecha Nacimiento es requerido

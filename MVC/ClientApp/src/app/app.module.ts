@@ -12,6 +12,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { PersonaComponent } from './persona/persona.component';
 import { PersonasService } from './persona/personas.service';
 import { PersonaFormComponent } from './persona/persona-form/persona-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +25,13 @@ import { PersonaFormComponent } from './persona/persona-form/persona-form.compon
     FetchDataComponent,
     PersonaComponent,
     PersonaFormComponent
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    MaterialModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -34,7 +39,8 @@ import { PersonaFormComponent } from './persona/persona-form/persona-form.compon
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'persona', component: PersonaComponent },
       { path: 'persona-crear', component: PersonaFormComponent }
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [PersonasService],
   bootstrap: [AppComponent]
