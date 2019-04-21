@@ -14,7 +14,7 @@ import { PersonasService } from './persona/personas.service';
 import { PersonaFormComponent } from './persona/persona-form/persona-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-
+import { BoostrapModule } from './boostrap/boostrap.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +33,7 @@ import { MaterialModule } from './material.module';
     FormsModule,
     MaterialModule,
     ReactiveFormsModule,
+    BoostrapModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },

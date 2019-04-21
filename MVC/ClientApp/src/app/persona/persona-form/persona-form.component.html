@@ -1,42 +1,30 @@
-<h1>{{modoEdicion ? 'Editar' : 'Agregar'}} Persona</h1>
+<h4>{{modoEdicion ? 'Editar' : 'Agregar'}} Registro</h4>
 
-<button type="button" class="btn btn-elegant">Elegant</button>
+<!--<button type="button" class="btn btn-elegant">Elegant</button>-->
 
 <form class="form-horizontal" novalidate (ngSubmit)="save()" [formGroup]="formGroup">
   <fieldset>
 
-    <div class="form-group" [ngClass]="{'has-error': (formGroup.get('nombre').touched || formGroup.get('nombre').dirty) && !formGroup.get('nombre').valid }">
-
-      <div class="col-md-8">
-        <mat-form-field>
-          <input matInput placeholder="Nombre" id="nombreId" type="text" required formControlName="nombre">
-        </mat-form-field>
-
+    <div class="form-row form-group" [ngClass]="{'has-error': (formGroup.get('nombre').touched || formGroup.get('nombre').dirty) && !formGroup.get('nombre').valid }">
+      <div class="form-group col-md-6">
+        <label for="name">Name</label>
+        <input id="nombreId" type="text" required formControlName="nombre" class="form-control" placeholder="Nombre">
         <span class="help-block" *ngIf="(formGroup.get('nombre').touched || formGroup.get('nombre').dirty) && formGroup.get('nombre').errors">
           <span *ngIf="formGroup.get('nombre').errors.required">
             El campo nombre es requerido
           </span>
         </span>
-
       </div>
-    </div>
+      <div class="form-group col-md-6">
+        <label for="date">Date</label>
 
-    <div class="form-group" [ngClass]="{'has-error': (formGroup.get('fechaNacimiento').touched || formGroup.get('fechaNacimiento').dirty) && !formGroup.get('fechaNacimiento').valid }">
-
-
-      <div class="col-md-8">
-
-        <mat-form-field>
-          <input matInput
-                 [matDatepicker]="picker"
-                 placeholder="Seleccionar fecha"
-                 id="fechaNacimiento"
-                 
-                 required
-                 formControlName="fechaNacimiento">
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
+        <div class="input-group">
+          <input id="fechaNacimiento" required formControlName="fechaNacimiento" class="form-control" placeholder="yyyy-mm-dd"
+                 name="dp" ngbDatepicker #d="ngbDatepicker" >
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar " (click)="d.toggle()" type="button"></button>
+          </div>
+        </div>
 
         <span class="help-block" *ngIf="(formGroup.get('fechaNacimiento').touched || formGroup.get('fechaNacimiento').dirty) && formGroup.get('fechaNacimiento').errors">
           <span *ngIf="formGroup.get('fechaNacimiento').errors.required">
@@ -58,13 +46,6 @@
           </button>
         </span>
 
-      </div>
-
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">@</span>
-        </div>
-        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
       </div>
 
     </div>

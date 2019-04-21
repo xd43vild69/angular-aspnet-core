@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { IPersona } from '../persona';
 import { PersonasService } from '../personas.service';
 import { Router } from '@angular/router';
+import { debug } from 'util';
 
 @Component({
   selector: 'app-persona-form',
@@ -30,6 +31,10 @@ export class PersonaFormComponent implements OnInit {
     // crear una persona apartir del formgroup
     let persona: IPersona = Object.assign({}, this.formGroup.value);
     console.log(persona);
+    debugger;
+    let newDate = new Date(this.formGroup.value.fechaNacimiento.year, this.formGroup.value.fechaNacimiento.month, this.formGroup.value.fechaNacimiento.day)
+    persona.fechaNacimiento = newDate;
+
     this.personaService.createPersona(persona)
       .subscribe(persona => this.OnSaveSuccess(),
         error => console.error(error));
