@@ -7,24 +7,17 @@
 
     <div class="form-group" [ngClass]="{'has-error': (formGroup.get('nombre').touched || formGroup.get('nombre').dirty) && !formGroup.get('nombre').valid }">
 
-
-
       <div class="col-md-8">
         <mat-form-field>
-          <input matInput
-                 placeholder="Nombre"
-                 id="nombreId"
-                 type="text"
-                 required
-                 formControlName="nombre">
+          <input matInput placeholder="Nombre" id="nombreId" type="text" required formControlName="nombre">
         </mat-form-field>
-
 
         <span class="help-block" *ngIf="(formGroup.get('nombre').touched || formGroup.get('nombre').dirty) && formGroup.get('nombre').errors">
           <span *ngIf="formGroup.get('nombre').errors.required">
             El campo nombre es requerido
           </span>
         </span>
+
       </div>
     </div>
 
@@ -54,14 +47,10 @@
     </div>
 
 
-   <div class="form-group">
+    <div class="form-group">
       <div class="col-md-4 col-md-offset-2">
         <span>
-          <button class="btn btn-primary"
-                  type="submit"
-                  [disabled]="!formGroup.valid">
-            Salvar
-          </button>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!formGroup.valid">Save</button>
           <button class="btn"
                   type="button"
                   [routerLink]='["/persona"]'>
@@ -69,6 +58,13 @@
           </button>
         </span>
 
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
       </div>
 
     </div>

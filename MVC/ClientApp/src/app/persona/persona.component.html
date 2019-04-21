@@ -1,17 +1,18 @@
-<h1>Personas</h1>
+<h3>Create a new register</h3>
 
-<button class="btn btn-primary" [routerLink]='["/persona-crear"]'>Agregar P</button>
+
+<button [routerLink]='["/persona-crear"]' mat-raised-button color="primary">Agregar Registro</button>
 
 <p *ngIf="!(personas && personas.length)">
-  No registers 
+  Not Return data!!! 
 </p>
 
-<table *ngIf="personas && personas.length">
+<table *ngIf="personas && personas.length" class="table table-striped">
   <thead>
     <tr>
-      <th>N</th>
-      <th>F</th>
-      <th>A</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -19,8 +20,8 @@
       <td>{{persona.nombre}}</td>
       <td>{{persona.fechaNacimiento | date : 'dd-MM-yyyy'}}</td>
       <td>
-        <button>Editar</button>
-        <button>Borrar</button>
+        <button mat-button color="primary">Edit</button>
+        <button mat-button color="primary">Delete</button>
       </td>
     </tr>
   </tbody>

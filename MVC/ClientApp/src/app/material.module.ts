@@ -10,6 +10,8 @@ import {
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav'
+import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { MatSidenavModule } from '@angular/material/sidenav'
     MatInputModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule,
+    MatTableModule
   ],
   exports: [
     MatDatepickerModule,
@@ -28,7 +32,9 @@ import { MatSidenavModule } from '@angular/material/sidenav'
     MatInputModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule,
+    MatTableModule
   ],
   providers: [MatDatepickerModule],
 })
