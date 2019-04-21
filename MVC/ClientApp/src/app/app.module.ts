@@ -15,6 +15,7 @@ import { PersonaFormComponent } from './persona/persona-form/persona-form.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { BoostrapModule } from './boostrap/boostrap.module';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BoostrapModule } from './boostrap/boostrap.module';
     CounterComponent,
     FetchDataComponent,
     PersonaComponent,
-    PersonaFormComponent
+    PersonaFormComponent,
+    FooterComponent
     
   ],
   imports: [
