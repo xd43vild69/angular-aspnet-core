@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { BoostrapModule } from './boostrap/boostrap.module';
 import { FooterComponent } from './footer/footer.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './footer/footer.component';
     FetchDataComponent,
     PersonaComponent,
     PersonaFormComponent,
-    FooterComponent
+    FooterComponent,
+    ProductComponent
     
   ],
   imports: [
@@ -40,6 +42,7 @@ import { FooterComponent } from './footer/footer.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'product', component: ProductComponent },
       { path: 'persona', component: PersonaComponent },
       { path: 'persona-crear', component: PersonaFormComponent }
     ]),
