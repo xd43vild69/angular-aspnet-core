@@ -13,5 +13,19 @@ namespace BLL.Movements
         {
             kardex.ValueSize = kardex.ValueSize + movement.ValueSize;
         }
+
+        public void UndoMovementOnKardex(Movement movement, ref Kardex kardex)
+        {
+            if (ValidateUndo())
+            {
+                kardex.ValueSize = kardex.ValueSize - movement.ValueSize;
+            }
+        }
+
+        private bool ValidateUndo()
+        {
+            return true;
+        }
+
     }
 }

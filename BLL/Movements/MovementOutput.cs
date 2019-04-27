@@ -20,5 +20,25 @@ namespace BLL.Movements
                 throw new ApplicationException("Negative Kardex.");
             }            
         }
+
+        public void UndoMovementOnKardex(Movement movement, ref Kardex kardex)
+        {
+            if (ValidateUndo(movement, kardex))
+            {
+                kardex.ValueSize = kardex.ValueSize + movement.ValueSize;
+            }
+        }
+
+        private bool ValidateUndo(Movement movement, Kardex kardex)
+        {
+            bool isValid = true;
+
+            if(kardex.ValueSize - movement.ValueSize <= 0)
+            {
+                isValid = false;
+            }
+
+            return isValid;
+        }
     }
 }
