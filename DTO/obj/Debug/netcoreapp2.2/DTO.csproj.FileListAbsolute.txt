@@ -1,0 +1,8 @@
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\bin\Debug\netcoreapp2.2\DTO.deps.json
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\bin\Debug\netcoreapp2.2\DTO.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\bin\Debug\netcoreapp2.2\DTO.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.csproj.CoreCompileInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.AssemblyInfoInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.AssemblyInfo.cs
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.pdb
