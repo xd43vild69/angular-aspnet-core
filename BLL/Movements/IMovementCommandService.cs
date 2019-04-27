@@ -6,6 +6,6 @@ namespace BLL.Movements
 {
     public interface IMovementCommandService
     {
-        Kardex ExcecuteMovement(Kardex kardex);
+        void ExcecuteMovementOnKardex(Movement movement, ref Kardex kardex);
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using BLL.Movements;
+using DTO;
 
 namespace CmdApp
 {
@@ -6,7 +8,7 @@ namespace CmdApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
         }
     }
 }

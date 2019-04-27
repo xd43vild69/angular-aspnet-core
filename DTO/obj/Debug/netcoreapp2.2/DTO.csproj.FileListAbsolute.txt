@@ -6,3 +6,4 @@ D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.A
 D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.AssemblyInfo.cs
 D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.dll
 D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DTO\obj\Debug\netcoreapp2.2\DTO.csprojAssemblyReference.cache

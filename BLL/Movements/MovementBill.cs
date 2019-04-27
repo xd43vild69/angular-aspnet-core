@@ -9,9 +9,9 @@ namespace BLL.Movements
     {
         public Kardex Kardex { get; set; }
 
-        public Kardex ExcecuteMovement(Kardex kardex)
+        public void ExcecuteMovementOnKardex(Movement movement, ref Kardex kardex)
         {
-            return null;
+            kardex.ValueSize = kardex.ValueSize + movement.ValueSize;
         }
     }
 }
