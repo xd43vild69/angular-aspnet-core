@@ -1,28 +1,27 @@
-﻿namespace BLL.Movements
+﻿using DTO;
+using System.Collections.Generic;
+
+namespace BLL.Movements
 {
     public class MovementFactory
     {
-        public IMovementCommandService MovementService { get; set; }
+        private readonly Dictionary<MovementTypeEnum, IMovementCommandService> Factories;
 
-        public IMovementCommandService InstanceMovement(DTO.MovementTypeEnum type)
+        public MovementFactory()
         {
-            switch (type)
+            Factories = new Dictionary<MovementTypeEnum, IMovementCommandService>()
             {
-                case DTO.MovementTypeEnum.Bill:
-                    MovementService = new MovementBill();
-                    break;
-                case DTO.MovementTypeEnum.Referrals:
-                    break;
-                case DTO.MovementTypeEnum.Output:
-                    break;
-                case DTO.MovementTypeEnum.CreditNote:
-                    break;
-                case DTO.MovementTypeEnum.DebitNote:
-                    break;
-                default:
-                    break;
-            }
-            return MovementService;
+                { MovementTypeEnum.Bill, new MovementBill()},
+                { MovementTypeEnum.Referrals, new MovementBill()},
+                { MovementTypeEnum.Output, new MovementOutput()},
+                { MovementTypeEnum.CreditNote, new MovementBill()},
+                { MovementTypeEnum.DebitNote, new MovementBill()}
+            };
+        }
+
+        public IMovementCommandService InstanceMovement(MovementTypeEnum type)
+        {
+            return Factories[type];
         }
     }
 }

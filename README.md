@@ -12,3 +12,8 @@ Lab Angular ASPNET Core
 ## Don't impose too many constraints on engineers. Provide incentives for some things, such as integration with the monitoring system and other infrastructure tools. But for the rest, allow teams to function as independently as possible. 
 
 ## Developers themselves know best which tools make them most productive and which tools are right for the job.
+
+
+
+
+https://code-maze.com/angular-best-practices/#filesandfolders
