@@ -1,0 +1,12 @@
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\bin\Debug\netcoreapp2.2\BLL.deps.json
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\bin\Debug\netcoreapp2.2\BLL.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\bin\Debug\netcoreapp2.2\BLL.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\bin\Debug\netcoreapp2.2\DTO.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\bin\Debug\netcoreapp2.2\DTO.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\obj\Debug\netcoreapp2.2\BLL.csprojAssemblyReference.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\obj\Debug\netcoreapp2.2\BLL.csproj.CoreCompileInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\obj\Debug\netcoreapp2.2\BLL.AssemblyInfoInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\obj\Debug\netcoreapp2.2\BLL.AssemblyInfo.cs
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\obj\Debug\netcoreapp2.2\BLL.csproj.CopyComplete
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\obj\Debug\netcoreapp2.2\BLL.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\BLL\obj\Debug\netcoreapp2.2\BLL.pdb

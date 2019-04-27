@@ -2,12 +2,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace BLL
+namespace BLL.Movements
 {
     public interface IMovementCommandService
     {
-        int InsertMovement();
-        void UpdateMovement();
-        void DeleteMovement();
+        Kardex ExcecuteMovement(Kardex kardex);
     }
 }
