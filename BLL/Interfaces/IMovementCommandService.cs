@@ -8,5 +8,6 @@ namespace BLL.Movements
     {
         void ExcecuteMovementOnKardex(Movement movement, ref Kardex kardex);
         void UndoMovementOnKardex(Movement movement, ref Kardex kardex);
+        void UpdateMovementOnKardex(Movement movement, ref Kardex kardex);
     }
 }

@@ -29,6 +29,14 @@ namespace BLL.Movements
             }
         }
 
+        public void UpdateMovementOnKardex(Movement movement, ref Kardex kardex)
+        {
+            if (ValidateUpdate())
+            {
+                kardex.ValueSize = kardex.ValueSize + movement.ValueSize;
+            }
+        }
+
         private bool ValidateUndo(Movement movement, Kardex kardex)
         {
             bool isValid = true;
@@ -39,6 +47,10 @@ namespace BLL.Movements
             }
 
             return isValid;
+        }
+        private bool ValidateUpdate()
+        {
+            return true;
         }
     }
 }

@@ -22,10 +22,22 @@ namespace BLL.Movements
             }
         }
 
+        public void UpdateMovementOnKardex(Movement movement, ref Kardex kardex)
+        {
+            if (ValidateUpdate())
+            {
+                kardex.ValueSize = kardex.ValueSize - movement.ValueSize;
+            }
+        }
+
         private bool ValidateUndo()
         {
             return true;
         }
 
+        private bool ValidateUpdate()
+        {
+            return true;
+        }
     }
 }
