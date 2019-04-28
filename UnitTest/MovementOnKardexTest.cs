@@ -8,38 +8,37 @@ namespace UnitTest
     [TestClass]
     public class MovementOnKardexTest
     {
-        private IMovementCommandService service { get; set; }
+        private IMovementCommandService Service { get; set; }
         private MovementFactory Factory { get; set; }
+        public Movement Movement { get; set; }
+        public Kardex Kardex { get; set; }
 
         public MovementOnKardexTest()
         {
             Factory = new MovementFactory();
+            Movement = new Movement() { ID = 1, ValueSize = 50 };
+            Kardex = new Kardex() { ID = 1, ValueSize = 100, Movements = new List<Movement>() { Movement } };
         }
 
         [TestMethod]
         public void ExecuteBillOnKardex()
         {
-            Movement movement = new Movement() { ID = 1, ValueSize = 50 };
-            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100, Movements = new List<Movement>() { movement} };
-            
-            
-            service = Factory.GetInstance(MovementTypeEnum.Bill);
-            kardex = service.ExcecuteMovementOnKardex(kardex);
+            Service = Factory.GetInstance(MovementTypeEnum.Bill);
 
-            Assert.IsTrue(150 == kardex.ValueSize);
+            Kardex = Service.ExcecuteMovementOnKardex(Kardex);
+
+            Assert.IsTrue(150 == Kardex.ValueSize);
         }
 
         [TestMethod]
         public void ExecuteOutputOnKardex()
         {
-            Movement movement = new Movement() { ID = 1, ValueSize = 50 };
-            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100, Movements = new List<Movement>() { movement } };
             
-            service = Factory.GetInstance(MovementTypeEnum.Output);
+            Service = Factory.GetInstance(MovementTypeEnum.Output);
 
-            kardex = service.ExcecuteMovementOnKardex(kardex);
+            Kardex = Service.ExcecuteMovementOnKardex(Kardex);
 
-            Assert.IsTrue(50 == kardex.ValueSize);
+            Assert.IsTrue(50 == Kardex.ValueSize);
         }
     }
 }
