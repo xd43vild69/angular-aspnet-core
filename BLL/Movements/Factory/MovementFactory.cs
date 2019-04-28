@@ -11,11 +11,11 @@ namespace BLL.Movements
         {
             Factories = new Dictionary<MovementTypeEnum, IMovementCommandService>()
             {
-                { MovementTypeEnum.Bill, new MovementBill()},
-                { MovementTypeEnum.Referrals, new MovementBill()},
-                { MovementTypeEnum.Output, new MovementOutput()},
-                { MovementTypeEnum.CreditNote, new MovementBill()},
-                { MovementTypeEnum.DebitNote, new MovementBill()}
+                { MovementTypeEnum.Bill, new Bill()},
+                { MovementTypeEnum.Referrals, new Bill()},
+                { MovementTypeEnum.Output, new Output()},
+                { MovementTypeEnum.CreditNote, new Bill()},
+                { MovementTypeEnum.DebitNote, new Bill()}
             };
         }
 

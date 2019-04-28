@@ -18,25 +18,25 @@ namespace UnitTest
         [TestMethod]
         public void ExecuteBillOnKardex()
         {
-            Kardex Kardex = new Kardex() { ID = 1, ValueSize = 100};
+            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100};
             Movement movement = new Movement() { ID = 1, ValueSize = 50 };
             
             service = Factory.InstanceMovement(MovementTypeEnum.Bill);
-            service.ExcecuteMovementOnKardex(movement, ref Kardex);
+            kardex = service.ExcecuteMovementOnKardex(movement, kardex);
 
-            Assert.IsTrue(150 == Kardex.ValueSize);
+            Assert.IsTrue(150 == kardex.ValueSize);
         }
 
         [TestMethod]
         public void ExecuteOutputOnKardex()
         {
-            Kardex Kardex = new Kardex() { ID = 1, ValueSize = 100 };
+            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100 };
             Movement movement = new Movement() { ID = 1, ValueSize = 50 };
             service = Factory.InstanceMovement(MovementTypeEnum.Output);
 
-            service.ExcecuteMovementOnKardex(movement, ref Kardex);
+            kardex = service.ExcecuteMovementOnKardex(movement,  kardex);
 
-            Assert.IsTrue(50 == Kardex.ValueSize);
+            Assert.IsTrue(50 == kardex.ValueSize);
         }
     }
 }

@@ -9,25 +9,28 @@ namespace BLL.Movements
     {
         public Kardex Kardex { get; set; }
 
-        public void ExcecuteMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex ExcecuteMovementOnKardex(Movement movement, Kardex kardex)
         {
             kardex.ValueSize = kardex.ValueSize + movement.ValueSize;
+            return kardex;
         }
 
-        public void UndoMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex UndoMovementOnKardex(Movement movement, Kardex kardex)
         {
             if (ValidateUndo())
             {
                 kardex.ValueSize = kardex.ValueSize - movement.ValueSize;
             }
+            return kardex;
         }
 
-        public void UpdateMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex UpdateMovementOnKardex(Movement movement, Kardex kardex)
         {
             if (ValidateUpdate())
             {
                 kardex.ValueSize = kardex.ValueSize - movement.ValueSize;
             }
+            return kardex;
         }
 
         private bool ValidateUndo()

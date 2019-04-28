@@ -1,0 +1,8 @@
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\bin\Debug\netcoreapp2.2\DAL.EF.deps.json
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\bin\Debug\netcoreapp2.2\DAL.EF.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\bin\Debug\netcoreapp2.2\DAL.EF.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\obj\Debug\netcoreapp2.2\DAL.EF.csproj.CoreCompileInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\obj\Debug\netcoreapp2.2\DAL.EF.AssemblyInfoInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\obj\Debug\netcoreapp2.2\DAL.EF.AssemblyInfo.cs
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\obj\Debug\netcoreapp2.2\DAL.EF.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\DAL.EF\obj\Debug\netcoreapp2.2\DAL.EF.pdb

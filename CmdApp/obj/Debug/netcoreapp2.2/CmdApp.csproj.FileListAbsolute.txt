@@ -1,0 +1,16 @@
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\obj\Debug\netcoreapp2.2\CmdApp.csprojAssemblyReference.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\obj\Debug\netcoreapp2.2\CmdApp.csproj.CoreCompileInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\obj\Debug\netcoreapp2.2\CmdApp.AssemblyInfoInputs.cache
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\obj\Debug\netcoreapp2.2\CmdApp.AssemblyInfo.cs
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\CmdApp.deps.json
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\CmdApp.runtimeconfig.json
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\CmdApp.runtimeconfig.dev.json
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\CmdApp.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\CmdApp.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\BLL.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\DTO.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\BLL.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\bin\Debug\netcoreapp2.2\DTO.pdb
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\obj\Debug\netcoreapp2.2\CmdApp.csproj.CopyComplete
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\obj\Debug\netcoreapp2.2\CmdApp.dll
+D:\Dev\angular-aspnet-core\angular-aspnet-core\CmdApp\obj\Debug\netcoreapp2.2\CmdApp.pdb

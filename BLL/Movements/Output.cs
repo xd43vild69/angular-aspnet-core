@@ -5,11 +5,11 @@ using System.Text;
 
 namespace BLL.Movements
 {
-    public class MovementOutput: IMovementCommandService
+    public class Output: IMovementCommandService
     {
         public Kardex Kardex { get; set; }
 
-        public void ExcecuteMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex ExcecuteMovementOnKardex(Movement movement, Kardex kardex)
         {
             if (kardex.ValueSize - movement.ValueSize >= 0)
             {
@@ -18,23 +18,26 @@ namespace BLL.Movements
             else
             {
                 throw new ApplicationException("Negative Kardex.");
-            }            
+            }
+            return kardex;
         }
 
-        public void UndoMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex UndoMovementOnKardex(Movement movement, Kardex kardex)
         {
             if (ValidateUndo(movement, kardex))
             {
                 kardex.ValueSize = kardex.ValueSize + movement.ValueSize;
             }
+            return kardex;
         }
 
-        public void UpdateMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex UpdateMovementOnKardex(Movement movement, Kardex kardex)
         {
             if (ValidateUpdate())
             {
                 kardex.ValueSize = kardex.ValueSize + movement.ValueSize;
             }
+            return kardex;
         }
 
         private bool ValidateUndo(Movement movement, Kardex kardex)

@@ -7,17 +7,17 @@ namespace BLL.Movements
 {
     public class Referral : IMovementCommandService
     {
-        public void ExcecuteMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex ExcecuteMovementOnKardex(Movement movement, Kardex kardex)
         {
             throw new NotImplementedException();
         }
 
-        public void UndoMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex UndoMovementOnKardex(Movement movement, Kardex kardex)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateMovementOnKardex(Movement movement, ref Kardex kardex)
+        public Kardex UpdateMovementOnKardex(Movement movement, Kardex kardex)
         {
             throw new NotImplementedException();
         }
