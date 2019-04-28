@@ -21,7 +21,7 @@ namespace UnitTest
             Kardex kardex = new Kardex() { ID = 1, ValueSize = 100};
             Movement movement = new Movement() { ID = 1, ValueSize = 50 };
             
-            service = Factory.InstanceMovement(MovementTypeEnum.Bill);
+            service = Factory.GetInstance(MovementTypeEnum.Bill);
             kardex = service.ExcecuteMovementOnKardex(movement, kardex);
 
             Assert.IsTrue(150 == kardex.ValueSize);
@@ -32,7 +32,7 @@ namespace UnitTest
         {
             Kardex kardex = new Kardex() { ID = 1, ValueSize = 100 };
             Movement movement = new Movement() { ID = 1, ValueSize = 50 };
-            service = Factory.InstanceMovement(MovementTypeEnum.Output);
+            service = Factory.GetInstance(MovementTypeEnum.Output);
 
             kardex = service.ExcecuteMovementOnKardex(movement,  kardex);
 

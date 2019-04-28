@@ -19,7 +19,7 @@ namespace BLL.Movements
             };
         }
 
-        public IMovementCommandService InstanceMovement(MovementTypeEnum type)
+        public IMovementCommandService GetInstance(MovementTypeEnum type)
         {
             return Factories[type];
         }

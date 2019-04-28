@@ -3,18 +3,18 @@ using DTO;
 
 namespace BLL.Store
 {
-    public class StoreBuilding : IStore
+    public class StoreSelective : IStore
     {
         private MovementFactory Factory { get; set; }
         private IMovementCommandService Service { get; set; }
         private Kardex Kardex { get; set; }
         private Movement Movement { get; set; }
 
-        public StoreBuilding(Movement movement, Kardex kardex)
+        public StoreSelective(Movement movement, Kardex kardex)
         {
             Movement = movement;
             Kardex = kardex;
-            Service = Factory.InstanceMovement(Movement.MovementType);
+            Service = Factory.GetInstance(Movement.MovementType);
         }
 
         public Kardex ExecuteMovementOnKardex()
