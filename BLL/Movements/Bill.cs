@@ -5,7 +5,7 @@ using DTO;
 
 namespace BLL.Movements
 {
-    public class MovementBill : IMovementCommandService
+    public class Bill : IMovementCommandService
     {
         public Kardex Kardex { get; set; }
 

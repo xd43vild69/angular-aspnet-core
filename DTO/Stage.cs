@@ -4,8 +4,8 @@ using System.Text;
 
 namespace DTO
 {
-    public class WorkStage: Entity
+    public class Stage: Entity
     {
-        public int WorkId { get; set; }
+        public virtual Budget Budget { get; set; }
     }
 }

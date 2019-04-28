@@ -6,6 +6,6 @@ namespace DTO
 {
     public class Work
     {
-        public virtual ICollection<WorkStage> WorkStages { get; set; }
+        public virtual ICollection<Stage> Stages { get; set; }
     }
 }
