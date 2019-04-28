@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DTO;
 
 namespace BLL.Store
 {
     public interface IStore
     {
-
+        Kardex ExecuteMovementOnKardex();
+        Kardex UndoMovementOnKardex();
+        Kardex UpdateMovementOnKardex();
     }
 }

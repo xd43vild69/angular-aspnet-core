@@ -3,10 +3,10 @@ using DTO;
 
 namespace BLL.Store
 {
-    public class StoreBuilding
+    public class StoreBuilding : IStore
     {
         private MovementFactory Factory { get; set; }
-        private IMovementCommandService service { get; set; }
+        private IMovementCommandService Service { get; set; }
         private Kardex Kardex { get; set; }
         private Movement Movement { get; set; }
 
@@ -14,13 +14,22 @@ namespace BLL.Store
         {
             Movement = movement;
             Kardex = kardex;
+            Service = Factory.InstanceMovement(Movement.MovementType);
         }
 
-        public void ExecuteMovementOnKardex()
+        public Kardex ExecuteMovementOnKardex()
         {
-            service = Factory.InstanceMovement(Movement.MovementType);
-            service.ExcecuteMovementOnKardex(Movement,  Kardex);
+            return Service.ExcecuteMovementOnKardex(Movement, Kardex);
         }
 
+        public Kardex UndoMovementOnKardex()
+        {
+            return Service.UndoMovementOnKardex(Movement, Kardex);
+        }
+
+        public Kardex UpdateMovementOnKardex()
+        {
+            return Service.UpdateMovementOnKardex(Movement, Kardex);
+        }
     }
 }
