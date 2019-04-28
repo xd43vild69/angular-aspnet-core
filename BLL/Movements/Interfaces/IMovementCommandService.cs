@@ -4,8 +4,8 @@ namespace BLL.Movements
 {
     public interface IMovementCommandService
     {
-        Kardex ExcecuteMovementOnKardex(Movement movement, Kardex kardex);
-        Kardex UndoMovementOnKardex(Movement movement, Kardex kardex);
-        Kardex UpdateMovementOnKardex(Movement movement, Kardex kardex);
+        Kardex ExcecuteMovementOnKardex(Kardex kardex);
+        Kardex UndoMovementOnKardex(Kardex kardex);
+        Kardex UpdateMovementOnKardex(Kardex kardex);
     }
 }

@@ -9,11 +9,11 @@ namespace BLL.Store.Factory
     {
         private readonly Dictionary<StoresEnum, IStore> Factories;
 
-        public StoreFactory(Movement movement, Kardex kardex)
+        public StoreFactory(Kardex kardex)
         {
             Factories = new Dictionary<StoresEnum, IStore>()
             {
-                { StoresEnum.Selective, new StoreSelective(movement, kardex)},
+                { StoresEnum.Selective, new StoreSelective(kardex)},
                 { StoresEnum.Fifo, new StoreFifo()},
                 { StoresEnum.Lifo, new StoreLifo()}
             };

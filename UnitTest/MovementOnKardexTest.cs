@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BLL.Movements;
 using DTO;
+using System.Collections.Generic;
 
 namespace UnitTest
 {
@@ -18,11 +19,12 @@ namespace UnitTest
         [TestMethod]
         public void ExecuteBillOnKardex()
         {
-            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100};
             Movement movement = new Movement() { ID = 1, ValueSize = 50 };
+            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100, Movements = new List<Movement>() { movement} };
+            
             
             service = Factory.GetInstance(MovementTypeEnum.Bill);
-            kardex = service.ExcecuteMovementOnKardex(movement, kardex);
+            kardex = service.ExcecuteMovementOnKardex(kardex);
 
             Assert.IsTrue(150 == kardex.ValueSize);
         }
@@ -30,11 +32,12 @@ namespace UnitTest
         [TestMethod]
         public void ExecuteOutputOnKardex()
         {
-            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100 };
             Movement movement = new Movement() { ID = 1, ValueSize = 50 };
+            Kardex kardex = new Kardex() { ID = 1, ValueSize = 100, Movements = new List<Movement>() { movement } };
+            
             service = Factory.GetInstance(MovementTypeEnum.Output);
 
-            kardex = service.ExcecuteMovementOnKardex(movement,  kardex);
+            kardex = service.ExcecuteMovementOnKardex(kardex);
 
             Assert.IsTrue(50 == kardex.ValueSize);
         }

@@ -1,5 +1,6 @@
 ﻿using BLL.Movements;
 using DTO;
+using System.Linq;
 
 namespace BLL.Store
 {
@@ -8,28 +9,27 @@ namespace BLL.Store
         private MovementFactory Factory { get; set; }
         private IMovementCommandService Service { get; set; }
         private Kardex Kardex { get; set; }
-        private Movement Movement { get; set; }
 
-        public StoreSelective(Movement movement, Kardex kardex)
+        public StoreSelective(Kardex kardex)
         {
-            Movement = movement;
             Kardex = kardex;
-            Service = Factory.GetInstance(Movement.MovementType);
+            Factory = new MovementFactory();
+            Service = Factory.GetInstance(kardex.Movements.FirstOrDefault().MovementType);
         }
 
         public Kardex ExecuteMovementOnKardex()
         {
-            return Service.ExcecuteMovementOnKardex(Movement, Kardex);
+            return Service.ExcecuteMovementOnKardex(Kardex);
         }
 
         public Kardex UndoMovementOnKardex()
         {
-            return Service.UndoMovementOnKardex(Movement, Kardex);
+            return Service.UndoMovementOnKardex(Kardex);
         }
 
         public Kardex UpdateMovementOnKardex()
         {
-            return Service.UpdateMovementOnKardex(Movement, Kardex);
+            return Service.UpdateMovementOnKardex(Kardex);
         }
     }
 }
